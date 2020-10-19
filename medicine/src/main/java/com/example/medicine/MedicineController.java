@@ -38,4 +38,9 @@ public class MedicineController {
             throw new NullPointerException("id must not be null");
         }else repository.delete(repository.findById(id).get());
     }
+    @PutMapping("/update/{id}")
+    public Medicine updateMedicine(@PathVariable Long id,@RequestBody Medicine medicine){
+        medicine.setId(id);
+        return repository.saveAndFlush(medicine);
+    }
 }

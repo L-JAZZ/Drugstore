@@ -38,4 +38,10 @@ public class CustomerController {
             throw new NullPointerException("id must not be null");
         }else repository.delete(repository.findById(id).get());
     }
+
+    @PutMapping("/update/{id}")
+    public Customer updateDoctor(@PathVariable Long id,@RequestBody Customer customer){
+        customer.setId(id);
+        return repository.saveAndFlush(customer);
+    }
 }

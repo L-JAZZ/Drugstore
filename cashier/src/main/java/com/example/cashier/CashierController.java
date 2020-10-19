@@ -24,6 +24,11 @@ public class CashierController {
         return repository.findAll();
     }
 
+    @GetMapping("/id/{id}")
+    public Cashier getByID(@PathVariable Long id){
+        return repository.findById(id).get();
+    }
+
     @PostMapping("/sell/{customerId}/{medicineId}")
     public void sellMedicine(@PathVariable Long customerId,@PathVariable Long medicineId){
         Customer customer = customerService.getCustomer(customerId);
@@ -41,7 +46,7 @@ public class CashierController {
         if(customer.getBalance()<medicine.getPrice()){
             cashier.setResult("not enough money!");
         }
-        else if(!(medicine.isPrescription() && customer.isPrescription())){
+        if((medicine.isPrescription() && !customer.isPrescription())){
             cashier.setResult("no prescription!");
         }else if(medicine.getQuantity()==0){
             cashier.setResult("Out of stock");
