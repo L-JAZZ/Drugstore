@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.projectreactor:reactor-core:3.3.12.BUILD-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/projectreactor/reactor-core/3.3.12.BUILD-SNAPSHOT/reactor-core-3.3.12.BUILD-20201204.174845-21.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/io/projectreactor/reactor-core/3.3.12.BUILD-SNAPSHOT/reactor-core-3.3.12.BUILD-20201204.174845-21-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/projectreactor/reactor-core/3.3.12.BUILD-SNAPSHOT/reactor-core-3.3.12.BUILD-20201204.174845-21-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
